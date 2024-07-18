@@ -1,14 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
     tools:context=".Profilefragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="this is profile fragment" />
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:textSize="18dp"
 
-</FrameLayout>
+
+        android:textColor="@color/white"
+       android:gravity="center_horizontal"
+        android:text="profile"/>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+
+        android:layout_height="100dp"
+        app:cardCornerRadius="150dp"
+android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/profilepicture"
+            android:background="@color/white"
+            android:scaleType="centerCrop" />
+
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark"
+        android:gravity="center"
+       android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="Edit profile image"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/profilePic"
+
+            android:background="@drawable/profileforprofile"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pickup History"
+            android:layout_alignStart="@id/profilePic"
+            android:id="@+id/textbox"
+            android:layout_marginStart="30dp"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textbox"
+            android:background="@color/colorPressed"
+
+            android:id="@+id/divider_name"/>
+        <ImageView
+            android:layout_below="@id/divider_name"
+            android:layout_width="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="25dp"
+            android:id="@+id/emailpic"
+            android:background="@drawable/baseline_email_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_alignStart="@id/emailpic"
+            android:id="@+id/textemail"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/divider_name"
+            android:layout_marginStart="30dp"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textemail"
+            android:background="@color/colorPressed"
+            android:id="@+id/divider_email"/>
+        <ImageView
+            android:layout_below="@id/divider_email"
+            android:layout_width="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="25dp"
+            android:id="@+id/settingpic"
+            android:background="@drawable/lock_password_svgrepo_com"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:layout_alignStart="@id/emailpic"
+            android:id="@+id/textsetting"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/divider_email"
+            android:layout_marginStart="30dp"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textsetting"
+            android:background="@color/colorPressed"
+            android:id="@+id/divider_setting"/>
+
+        <ImageView
+            android:layout_below="@id/divider_setting"
+            android:layout_width="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="24dp"
+            android:id="@+id/reportPic"
+            android:background="@drawable/questionmark"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Issue"
+            android:layout_alignStart="@id/reportPic"
+            android:id="@+id/textReport"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/divider_setting"
+            android:layout_marginStart="30dp"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textReport"
+            android:background="@color/colorPressed"
+            android:id="@+id/divider_report"/>
+
+
+
+        <ImageView
+            android:layout_below="@id/divider_report"
+            android:layout_width="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="24dp"
+            android:id="@+id/atThePic"
+            android:background="@drawable/attherate"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About app"
+            android:layout_alignStart="@id/atThePic"
+            android:id="@+id/textatthe"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/divider_report"
+            android:layout_marginStart="30dp"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textatthe"
+            android:background="@color/colorPressed"
+            android:id="@+id/divider_atthe"/>
+        <ImageView
+            android:layout_below="@id/divider_atthe"
+            android:layout_width="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="24dp"
+            android:id="@+id/privacypic"
+            android:background="@drawable/privacylocked"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="privacy &amp; policy"
+            android:layout_alignStart="@id/privacypic"
+            android:id="@+id/textprivacy"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/divider_atthe"
+            android:layout_marginStart="30dp"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textprivacy"
+            android:background="@color/colorPressed"
+            android:id="@+id/divider_privacy"/>
+
+
+        <ImageView
+            android:layout_below="@id/divider_privacy"
+            android:layout_width="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="24dp"
+            android:id="@+id/logoutpic"
+            android:background="@drawable/logoutpic"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_alignStart="@id/logoutpic"
+            android:id="@+id/textlogout"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/divider_privacy"
+            android:layout_marginStart="30dp"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textlogout"
+            android:background="@color/colorPressed"
+            android:id="@+id/divider_logout"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

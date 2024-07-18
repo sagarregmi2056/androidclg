@@ -5,6 +5,8 @@
     <color name="yellow">#F08500</color>
     <color name="dark">#1B4A5A</color>
     <color name="plainYellow"> #f5ae6c</color>
+    <color name="colorPressed">#F0FFFF</color>
+    <color name="colorFocused">#F0FFFF</color>
 
 
 </resources>

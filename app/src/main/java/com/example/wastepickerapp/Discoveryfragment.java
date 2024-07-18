@@ -33,8 +33,8 @@ public class Discoveryfragment extends Fragment {
         // Initialize VideoView
         videoView = view.findViewById(R.id.video);
 
-        String videoUrl = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.video;
-
+       // String videoUrl = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.video;
+  String videoUrl = "https://depositphotos.com/editorial/kyiv-ukraine-april-3-2018-deputies-of-the-ukrainian-parliament-kyiv-ukraine-347440870.html";
         // Set the video URL
 //        String videoUrl = "android.resource://"+ getActivity().getPackageName()+"/"+R.raw.video; // Replace with your video URL
 
