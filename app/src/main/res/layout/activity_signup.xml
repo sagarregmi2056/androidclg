@@ -52,6 +52,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Your full name"
+        android:id="@+id/editTextUsername"
 
         android:drawableLeft="@drawable/user_svgrepo_com__1_"
 
@@ -72,6 +73,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Your Email"
+        android:id="@+id/editTextEmail"
 
         android:drawableLeft="@drawable/baseline_email_24"
 
@@ -91,6 +93,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Your password"
+        android:id="@+id/editTextPassword"
 
         android:drawableLeft="@drawable/lock_password_svgrepo_com"
 
@@ -110,6 +113,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Confirm your password"
+        android:id="@+id/editTextConfirmPw"
 
         android:drawableLeft="@drawable/icons8_lock"
 
@@ -135,7 +139,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:id="@+id/register_BTN"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textSize="20dp"
         android:textAlignment="textStart"
         style="@style/CustomButtonStyle"

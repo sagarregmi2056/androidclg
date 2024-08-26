@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:padding="20dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/backImage"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:drawingCacheQuality="auto"
+                android:src="@drawable/baseline_arrow_back_ios_24" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="18dp"
+
+
+                android:textColor="@color/white"
+
+                android:text="profile"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:padding="20dp"
+                android:id="@+id/notifyImg"
+            android:layout_alignParentRight="true"
+                android:layout_height="match_parent"
+
+
+
+                android:src="@drawable/notification_bell" />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

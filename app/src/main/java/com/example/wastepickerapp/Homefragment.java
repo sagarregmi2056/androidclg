@@ -3,6 +3,7 @@ package com.example.wastepickerapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.ImageView;
 
 
 public class Homefragment extends Fragment {
@@ -30,6 +32,20 @@ public class Homefragment extends Fragment {
         Log.d(TAG, "Loading URL: " + url);
         // Load Google Maps embed code
         webViewMap.loadUrl(url);
+
+
+
+        ImageView notificationImage = view.findViewById(R.id.notificationImage);
+        notificationImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment notificationFragment = new NotificationFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frameLayout, notificationFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
         return view;
     }
 }

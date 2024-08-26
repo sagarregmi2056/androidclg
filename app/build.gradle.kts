@@ -34,6 +34,10 @@ android {
 dependencies {
 
     implementation(libs.appcompat)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofitGson)
+    implementation(libs.okhttpLogging)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
