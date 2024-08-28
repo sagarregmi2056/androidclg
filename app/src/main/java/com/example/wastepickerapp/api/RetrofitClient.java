@@ -1,4 +1,4 @@
-package com.example.wastepickerapp;
+package com.example.wastepickerapp.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

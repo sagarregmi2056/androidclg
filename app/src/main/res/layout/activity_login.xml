@@ -120,21 +120,24 @@
             android:layout_marginRight="4dp"/>
 
 
-        <Button
+        <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="20dp"
             android:text="Signup"
-            android:textAlignment="center"
+
             android:textFontWeight="600"
             android:fontFamily="sans-serif"
             android:id="@+id/register_BTN"
             android:textColor="@android:color/holo_blue_dark"
             android:backgroundTint="@color/white"
             android:textSize="20sp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginRight="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            />
 
 
 

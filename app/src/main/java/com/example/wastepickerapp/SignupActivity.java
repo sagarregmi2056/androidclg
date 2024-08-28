@@ -2,33 +2,35 @@ package com.example.wastepickerapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import java.io.IOException;
+import com.example.wastepickerapp.api.RetrofitClient;
+import com.example.wastepickerapp.models.DefaultResponse;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SignupActivity extends AppCompatActivity {
-    private Button login_BTN ,register_BTN;
+    private Button register_BTN ;
+    private TextView login_BTN;
  private EditText editTextUsername,editTextEmail,editTextPassword,editTextConfirmPw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signup);
+        login_BTN = findViewById(R.id.login_BTN);
+        register_BTN = findViewById(R.id.register_BTN);
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
@@ -86,29 +88,37 @@ register_BTN.setOnClickListener(new View.OnClickListener() {
             editTextConfirmPw.requestFocus();
             return;
         }
-        Call<ResponseBody> call = RetrofitClient.getInstance().getApi().Register(username,email,password,confirm_password);
+        Call<DefaultResponse> call = RetrofitClient.getInstance().getApi().Register(username,email,password,confirm_password);
 
-        call.enqueue(new Callback<ResponseBody>() {
+        call.enqueue(new Callback<DefaultResponse>() {
             @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-            try {
-                String s = response.body().string();
-                Toast.makeText(SignupActivity.this,s, Toast.LENGTH_SHORT).show();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-            }
+            public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
+
+
+                    // Convert response body to a string
+                    if (response.code() == 201) {
+                        DefaultResponse dr = response.body();
+                        Toast.makeText(SignupActivity.this, dr.getMsg(), Toast.LENGTH_LONG).show();
+                        // Redirect to LoginActivity
+                        Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                    } else if(response.code() == 422) {
+
+                        Toast.makeText(SignupActivity.this,"user already exist" , Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+
+
 
             @Override
-            public void onFailure(Call<ResponseBody> call, Throwable throwable) {
+            public void onFailure(Call<DefaultResponse> call, Throwable throwable) {
+                Log.e("API Error", "Network Error: ", throwable);
                 Toast.makeText(SignupActivity.this, throwable.getMessage(), Toast.LENGTH_SHORT).show();
-
             }
         });
-
     }
 });
-
-
     }
 }
