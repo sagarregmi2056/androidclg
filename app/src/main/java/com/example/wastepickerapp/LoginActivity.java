@@ -1,7 +1,9 @@
 package com.example.wastepickerapp;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
@@ -27,7 +29,9 @@ public class LoginActivity extends AppCompatActivity {
     private Button  login_BTN;
     private TextView register_BTN;
     private EditText email_ET, password_ET;
-
+    private SharedPreferences sharedPreferences;
+    private static final String SHARED_PREF_NAME = "wastepicker_pref";
+    private static final String KEY_TOKEN = "key_token";
 
 
     @Override
@@ -35,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         login_BTN = findViewById(R.id.login_BTN);
         register_BTN = findViewById(R.id.register_BTN);
         email_ET = findViewById(R.id.email_ET);
@@ -91,10 +96,13 @@ public class LoginActivity extends AppCompatActivity {
                                   String token = loginResponse.getToken();
 
                                   if ("Success".equals(status)) {
+                                      SharedPreferences.Editor editor = sharedPreferences.edit();
+                                      editor.putString(KEY_TOKEN, token);
+                                      editor.apply();
                                       Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
                                       // Save token and proceed to the main activity
                                       // e.g., SharedPreferences or other storage
-                                      Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                      Intent intent = new Intent(LoginActivity.this, AddressFormActivity.class);
                                       startActivity(intent);
                                       finish(); // Close the LoginActivity
                                   } else {

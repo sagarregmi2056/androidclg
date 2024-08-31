@@ -1,5 +1,7 @@
 package com.example.wastepickerapp;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -19,11 +21,26 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView ;
     private FrameLayout frameLayout;
+    private static final String SHARED_PREF_NAME = "wastepicker_pref";
+    private static final String KEY_TOKEN = "key_token";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+        String token = sharedPreferences.getString(KEY_TOKEN, null);
+        if (token == null) {
+            // User is not logged in, redirect to LoginActivity
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+            return; // Prevent further execution of this method
+        }
+
+
+
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.bottomNavView);

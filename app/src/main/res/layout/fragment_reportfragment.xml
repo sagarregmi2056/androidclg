@@ -3,12 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reportfragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context=".Reportfragment"
+    >
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="this is report fragment" />
+        android:scaleType="fitCenter"
+
+        android:contentDescription="@string/camera_image" />
+
+    <Button
+        android:id="@+id/captureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture Image"
+        android:background="@color/dark"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="16dp" />
+
 
 </FrameLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Provinces -->
+    <string-array name="provinces_array">
+
+        <item>Province 1</item>
+        <item>Province 2</item>
+        <item>Bagmati Province</item>
+        <item>Gandaki Province</item>
+        <item>Lumbini Province</item>
+        <item>Karnali Province</item>
+        <item>Sudurpashchim Province</item>
+    </string-array>
+
+    <!-- Districts -->
+    <string-array name="districts_default">
+        <item>Select District</item>
+    </string-array>
+    <string-array name="districts_province_1">
+
+        <item>Bhojpur</item>
+        <item>Dhankuta</item>
+        <item>Illam</item>
+        <item>Khotang</item>
+    </string-array>
+    <string-array name="districts_province_2">
+
+        <item>Bara</item>
+        <item>Dhanusha</item>
+        <item>Janakpur</item>
+        <item>Mahottari</item>
+    </string-array>
+    <string-array name="districts_bagmati">
+
+        <item>Kathmandu</item>
+        <item>Chitwan</item>
+        <item>Bhaktapur</item>
+        <item>Lalitpur</item>
+    </string-array>
+    <string-array name="districts_gandaki">
+
+        <item>Kaski</item>
+        <item>Gorkha</item>
+        <item>Lamjung</item>
+        <item>Syangja</item>
+    </string-array>
+    <string-array name="districts_lumbini">
+
+        <item>Rupandehi</item>
+        <item>Kapilvastu</item>
+        <item>Nawalpur</item>
+        <item>Palpa</item>
+    </string-array>
+    <string-array name="districts_karnali">
+
+        <item>Surkhet</item>
+        <item>Jumla</item>
+        <item>Dolpa</item>
+        <item>Humla</item>
+    </string-array>
+    <string-array name="districts_sudurpashchim">
+
+        <item>Kailali</item>
+        <item>Kanchanpur</item>
+        <item>Achham</item>
+        <item>Doti</item>
+    </string-array>
+
+    <!-- Metropolitan Cities -->
+    <string-array name="metropolitan_cities_default">
+        <item>Select Metropolitan City</item>
+    </string-array>
+    <string-array name="metropolitan_cities_province_1">
+
+        <item>Bhojpur Municipality</item>
+        <item>Dhankuta Municipality</item>
+    </string-array>
+    <string-array name="metropolitan_cities_province_2">
+
+        <item>Bara Municipality</item>
+        <item>Janakpur Municipality</item>
+    </string-array>
+    <string-array name="metropolitan_cities_bagmati">
+
+        <item>Kathmandu Metropolitan City</item>
+        <item>Bhaktapur Metropolitan City</item>
+        <item>Lalitpur Metropolitan City</item>
+    </string-array>
+    <string-array name="metropolitan_cities_gandaki">
+
+        <item>Pokhara Metropolitan City</item>
+    </string-array>
+    <string-array name="metropolitan_cities_lumbini">
+
+        <item>Butwal</item>
+        <item>Krishnanagar</item>
+    </string-array>
+    <string-array name="metropolitan_cities_karnali">
+
+        <item>Birendranagar</item>
+    </string-array>
+    <string-array name="metropolitan_cities_sudurpashchim">
+
+        <item>Dhangadhi</item>
+        <item>Mahakali</item>
+    </string-array>
+</resources>

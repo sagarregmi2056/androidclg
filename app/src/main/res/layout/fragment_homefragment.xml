@@ -30,6 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:text="Hi "
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -40,6 +41,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/usernameTextView"
             android:text="sulochana"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -102,6 +104,7 @@
                     android:paddingLeft="20dp"
                     android:paddingTop="20dp"
                     android:paddingRight="20dp"
+                    android:id="@+id/ScheduleDateTextView"
                     android:text="Thursday ,December 23 "
                     android:textColor="@color/dark"
                     android:textSize="30dp"
@@ -127,7 +130,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="60dp"
                         android:paddingBottom="10dp"
-                        android:text="we will arrive between"
+                        android:text="we will arrive on"
 
                         />
 
@@ -135,6 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="  12pm:14am"
+                        android:id="@+id/arrivalTimeTextView"
                         android:textAlignment="textStart"
                         android:textColor="@color/dark"
                         android:textStyle="bold" />
